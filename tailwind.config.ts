@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -115,7 +114,11 @@ export default {
 				},
 				shimmer: {
 					'100%': { transform: 'translateX(100%)' }
-				}
+				},
+				ripple: {
+					'0%': { opacity: '0.8', transform: 'scale(0)' },
+					'100%': { opacity: '0', transform: 'scale(2)' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -129,7 +132,8 @@ export default {
 				'enter': 'fade-in 0.5s ease-out, scale-in 0.3s ease-out',
 				'exit': 'fade-out 0.5s ease-out, scale-out 0.3s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'shimmer': 'shimmer 2s infinite'
+				'shimmer': 'shimmer 2s infinite',
+				'ripple': 'ripple 0.6s linear forwards',
 			},
 			fontSize: {
 				'2xs': '0.625rem'
